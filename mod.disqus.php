@@ -140,7 +140,8 @@ class Disqus {
           }     
 
             //Get All Comments
-            $comments = $disqus->posts->list();
+            //$comments = $disqus->posts->list();
+            $comments = $disqus->posts->list(array(‘forum’=>$this->settings[‘shortname’]));
 
             $comment_info = array();
 
